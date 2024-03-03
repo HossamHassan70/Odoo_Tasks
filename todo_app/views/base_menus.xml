@@ -1,8 +1,4 @@
  <odoo>
-    <data>
-        <menuitem id="menu_todo_tickets" name="Todo" parent="base.menu_root" sequence="20"/>
-        <menuitem id="menu_todo_tickets_all" name="All Tickets" web_icon="todo_ticket,static/description/icon.png"/> parent="menu_todo_tickets" action="action_todo_tickets_kanban" sequence="10"/>
-        <menuitem id="menu_todo_tickets_my" name="My Tickets" parent="menu_todo_tickets" action="action_todo_tickets_kanban" sequence="20" attrs="{'invisible': [('assign_to', '!=', uid)]}"/>
-        <menuitem id="menu_todo_tickets_create" name="Create Ticket" parent="menu_todo_tickets" action="action_todo_ticket_form" sequence="30"/>
-    </data>
+    <menuitem id="menu_todo" name="todo"/>
+    <menuitem id="menu_root_tickets" name="Tickets" parent="menu_todo"/>
 </odoo>

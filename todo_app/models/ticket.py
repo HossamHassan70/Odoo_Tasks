@@ -1,8 +1,8 @@
 from odoo import fields, models
 
 
-class Form(models.Model):
-    _name = 'form'
+class Ticket(models.Model):
+    _name = 'todo.ticket'
     _description = 'Todo Form'
 
     name = fields.Char(required=True)
@@ -12,7 +12,6 @@ class Form(models.Model):
         ('add', 'Add'),
         ('doing', 'Doing'),
         ('done', 'Done')],
-        string='State', default='new')
+         default='add')
     file = fields.Binary()
-    assign_to = fields.Many2one('res.users')
     description = fields.Text()
